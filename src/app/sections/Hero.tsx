@@ -1,0 +1,44 @@
+"use client";
+
+import Image from "next/image";
+
+export default function Hero() {
+  return (
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-[#FFF9F0]">
+      <div className="absolute top-24 left-10 w-32 h-32 bg-[#FFD23F] rounded-full opacity-70 animate-float" style={{ animationDelay: "0s" }} />
+      <div className="absolute bottom-32 right-16 w-40 h-40 bg-[#4ECDC4] rounded-full opacity-60 animate-float" style={{ animationDelay: "1.5s" }} />
+      <div className="absolute top-1/2 right-10 w-24 h-24 bg-[#FF6B9D] rounded-full opacity-60 animate-float" style={{ animationDelay: "3s" }} />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+        <div className="text-center md:text-left">
+          <div className="inline-block comic-card px-6 py-2 mb-8 bg-[#FFD23F] rotate-[-2deg]">
+            <p className="font-display font-bold text-sm md:text-base text-[#1B1B2F]">👋 Hey, welcome to my world!</p>
+          </div>
+
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-[#1B1B2F] leading-tight">
+            Hi, I&apos;m <span className="text-[#FF6B9D]">Saijal</span> ✨
+          </h1>
+
+          <p className="text-lg md:text-xl text-[#1B1B2F]/70 mb-10 font-medium opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
+            AI & ML Engineer | Full Stack Developer
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start opacity-0 animate-fade-in-up" style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}>
+            <a href="#projects" className="comic-btn px-8 py-4 bg-[#FF6B9D] text-white">
+              View My Work 🚀
+            </a>
+            <a href="#contact" className="comic-btn px-8 py-4 bg-white text-[#1B1B2F]">
+              Contact Me 💌
+            </a>
+          </div>
+        </div>
+
+        <div className="relative flex justify-center">
+          <div className="comic-card overflow-hidden rounded-[32px] max-w-sm animate-slide-in-right" style={{ animationDelay: "0.2s" }}>
+            <Image src="/images/avtar.handle.png" alt="Saijal Chauhan avatar" width={500} height={600} className="w-full h-auto object-cover" priority />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
