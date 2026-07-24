@@ -30,6 +30,9 @@ export default function Hero() {
             <a href="#contact" className="comic-btn px-8 py-4 bg-white text-[#1B1B2F]">
               Contact Me 💌
             </a>
+            <a href="/resume.pdf" download className="comic-btn px-8 py-4 bg-[#4ECDC4] text-[#1B1B2F]">
+              Download CV 📄
+            </a>
           </div>
         </div>
 

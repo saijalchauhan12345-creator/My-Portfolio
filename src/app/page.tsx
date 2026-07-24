@@ -5,10 +5,14 @@ import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import FloatingLinkedIn from "./sections/FloatingLinkedIn";
+import ScrollToTop from "./sections/ScrollToTop";
+import Loader from "./sections/Loader";
 
 export default function Home() {
   return (
     <main>
+      <Loader />
       <Navbar />
       <Hero />
       <About />
@@ -16,6 +20,8 @@ export default function Home() {
       <Skills />
       <Contact />
       <Footer />
+      <FloatingLinkedIn />
+      <ScrollToTop />
     </main>
   );
 }
