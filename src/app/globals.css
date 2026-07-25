@@ -86,3 +86,16 @@ h1, h2, h3, h4, .font-display {
   transform: translate(2px, 2px);
   box-shadow: 1px 1px 0 #1B1B2F;
 }
+@keyframes confettiPop {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx, 40px), var(--ty, -40px)) scale(0);
+    opacity: 0;
+  }
+}
+.animate-confetti-pop {
+  animation: confettiPop 0.7s ease-out forwards;
+}
