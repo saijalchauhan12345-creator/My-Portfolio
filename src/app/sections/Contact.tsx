@@ -108,7 +108,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-[#1B1B2F]/60 font-semibold">Location</p>
-                    <p className="text-[#1B1B2F] font-bold text-sm">Greater Noida, UP</p>
+                    <p className="text-[#1B1B2F] font-bold text-sm">Delhi, India</p>
                   </div>
                 </div>
 
