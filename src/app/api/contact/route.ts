@@ -5,32 +5,23 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, email, subject, message } = body;
 
-    if (!name || !email || !message) {
+    if (!name || !email || !subject || !message) {
       return NextResponse.json(
-        { success: false, error: "Name, email, and message are required" },
+        { success: false, error: "All fields are required." },
         { status: 400 }
       );
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { success: false, error: "Invalid email address" },
-        { status: 400 }
-      );
-    }
-
-    console.log("Contact Form:", { name, email, subject, message });
-
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Log the message (visible in Vercel function logs)
+    console.log("New contact form submission:", { name, email, subject, message });
 
     return NextResponse.json({
       success: true,
-      message: "Thank you! Your message has been sent successfully!",
+      message: "Thanks for reaching out! I'll get back to you soon.",
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
-      { success: false, error: "Something went wrong. Please try again later." },
+      { success: false, error: "Something went wrong. Please try again." },
       { status: 500 }
     );
   }
