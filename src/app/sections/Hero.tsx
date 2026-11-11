@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -30,7 +31,13 @@ export default function Hero() {
             <a href="#contact" className="comic-btn px-6 py-3 md:px-8 md:py-4 bg-white text-[#1B1B2F] text-sm md:text-base text-center">
               Contact Me 💌
             </a>
-            <a href="/resume.pdf" download className="comic-btn px-6 py-3 md:px-8 md:py-4 bg-[#4ECDC4] text-[#1B1B2F] text-sm md:text-base text-center">
+
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="comic-btn px-6 py-3 md:px-8 md:py-4 bg-[#4ECDC4] text-[#1B1B2F] text-sm md:text-base text-center"
+            >
               Download CV 📄
             </a>
           </div>

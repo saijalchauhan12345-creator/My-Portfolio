@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -27,6 +28,14 @@ const projects = [
     color: "#4ECDC4",
     emoji: "📊",
     github: "https://github.com/saijalchauhan12345-creator/COVID-19",
+  },
+  {
+    title: "Object Detection & Tracking",
+    desc: "Real-time object detection and tracking system using YOLOv8, OpenCV, and ByteTrack. Detects objects from webcam or video input with bounding boxes, object labels, and unique tracking IDs.",
+    tech: ["Python", "YOLOv8", "OpenCV", "ByteTrack"],
+    color: "#A78BFA",
+    emoji: "👁️",
+    github: "https://github.com/saijalchauhan12345-creator/object-detection",
   },
 ];
 
@@ -59,30 +68,54 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-block comic-card px-5 py-2 mb-4 bg-[#4ECDC4] rotate-[-2deg]">
-            <p className="font-display font-bold text-sm text-[#1B1B2F]">🛠️ What I&apos;ve Built</p>
+            <p className="font-display font-bold text-sm text-[#1B1B2F]">
+              🛠️ What I&apos;ve Built
+            </p>
           </div>
-          <h2 className="font-display text-4xl md:text-5xl font-extrabold text-[#1B1B2F]">My Projects</h2>
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold text-[#1B1B2F]">
+            My Projects
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, i) => (
-            <div key={i} className="project-card comic-card p-6 opacity-0 translate-y-10">
-              <div className="relative h-40 mb-6 rounded-2xl flex items-center justify-center border-3 border-[#1B1B2F]" style={{ backgroundColor: project.color }}>
+            <div
+              key={i}
+              className="project-card comic-card p-6 opacity-0 translate-y-10"
+            >
+              <div
+                className="relative h-40 mb-6 rounded-2xl flex items-center justify-center border-3 border-[#1B1B2F]"
+                style={{ backgroundColor: project.color }}
+              >
                 <span className="text-6xl">{project.emoji}</span>
               </div>
 
-              <h3 className="font-display text-xl font-bold mb-2 text-[#1B1B2F]">{project.title}</h3>
-              <p className="text-[#1B1B2F]/70 text-sm mb-4 leading-relaxed">{project.desc}</p>
+              <h3 className="font-display text-xl font-bold mb-2 text-[#1B1B2F]">
+                {project.title}
+              </h3>
+
+              <p className="text-[#1B1B2F]/70 text-sm mb-4 leading-relaxed">
+                {project.desc}
+              </p>
 
               <div className="flex flex-wrap gap-2 mb-5">
                 {project.tech.map((t, j) => (
-                  <span key={j} className="px-3 py-1 text-xs font-semibold rounded-full border-2 border-[#1B1B2F] text-[#1B1B2F]" style={{ backgroundColor: `${project.color}55` }}>
+                  <span
+                    key={j}
+                    className="px-3 py-1 text-xs font-semibold rounded-full border-2 border-[#1B1B2F] text-[#1B1B2F]"
+                    style={{ backgroundColor: `${project.color}55` }}
+                  >
                     {t}
                   </span>
                 ))}
               </div>
 
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="comic-btn w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#1B1B2F] text-white text-sm">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="comic-btn w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#1B1B2F] text-white text-sm"
+              >
                 <Link2 size={16} />
                 View on GitHub
               </a>
